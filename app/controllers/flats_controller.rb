@@ -10,6 +10,7 @@ class FlatsController < ApplicationController
   # GET /flats/1
   # GET /flats/1.json
   def show
+
   end
 
   # GET /flats/new
@@ -21,23 +22,17 @@ class FlatsController < ApplicationController
   def edit
   end
 
-  # POST /flats
-  # POST /flats.json
   def create
     @flat = Flat.create(flat_params)
     redirect_to flat_path(@flat)
   end
 
-  # PATCH/PUT /flats/1
-  # PATCH/PUT /flats/1.json
   def update
     @flat.update!(flat_params)
     flash[:info] = "You have updated successfully the #{@flat.title}"
     redirect_to flat_path(@flat)
   end
 
-  # DELETE /flats/1
-  # DELETE /flats/1.json
   def destroy
     @flat.destroy
     redirect_to flats_path
