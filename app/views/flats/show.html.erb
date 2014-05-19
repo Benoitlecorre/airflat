@@ -4,25 +4,24 @@
 
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @flat.title %>
-</p>
+<div class= "col-md-12">
+  <h3><%= @flat.title %><h3>
+</div>
 
 <p>
   <strong>Description:</strong>
-  <%= @flat.description %>
+  <p><%= @flat.description %></p>
 </p>
 
 <p>
   <strong>Address:</strong>
-  <%= @flat.address %>
+  <address><%= @flat.address %></address>
 </p>
 
 <p>
   <strong>Day-price:</strong>
-  <%= @flat.dayprice %>
+  <span><%= @flat.dayprice %></span> €
 </p>
 
-<%= link_to 'Edit', edit_flat_path(@flat) %> |
-<%= link_to 'Back', flats_path %>
+<%= link_to 'Edit', edit_flat_path(@flat), class:"btn btn-info" %> |
+<%= link_to 'Back', flats_path, class:"btn btn-info"  %>
