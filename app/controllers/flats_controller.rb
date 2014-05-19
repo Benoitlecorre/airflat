@@ -24,9 +24,8 @@ class FlatsController < ApplicationController
   # POST /flats
   # POST /flats.json
   def create
-    @flat = Flat.new(flat_params)
-
-
+    @flat = Flat.create(flat_params)
+    redirect_to flat_path(@flat)
   end
 
   # PATCH/PUT /flats/1
