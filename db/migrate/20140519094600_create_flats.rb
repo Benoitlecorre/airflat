@@ -4,7 +4,7 @@ class CreateFlats < ActiveRecord::Migration
       t.string :title
       t.text :description
       t.string :address
-      t.interger :day-price
+      t.integer :dayprice
 
       t.timestamps
     end
