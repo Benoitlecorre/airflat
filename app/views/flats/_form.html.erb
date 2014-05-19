@@ -1,33 +1,31 @@
-<%= form_for(@flat) do |f| %>
-  <% if @flat.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@flat.errors.count, "error") %> prohibited this flat from being saved:</h2>
 
-      <ul>
-      <% @flat.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+
+    <%= bootstrap_form_for(@flat, layout: :horizontal, label_col: "col-sm-4", control_col: "col-sm-4", ) do |f| %>
+      <% if @flat.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@flat.errors.count, "error") %> prohibited this flat from being saved:</h2>
+
+          <ul>
+          <% @flat.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_field :address %>
-  </div>
-  <div class="field">
-    <%= f.label :daysprice %><br>
-    <%= f.text_field :dayprice %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+      <div class="field">
+        <%= f.text_field :title, label: "Titrez votre annonce", placeholder: "Pied à terre amoureux" %>
+      </div>
+      <div class="field">
+        <%= f.text_area :description, label: "Décrivez votre logement, donnez envie à vos futurs hôtes", placeholder: "Charmant studio dans le Marais, à deux pas des stations de métro"   %>
+      </div>
+      <div class="field">
+        <%= f.text_field :address, label: "Votre adresse", placeholder: "12 rue du Petit Musc, 75004, Paris" %>
+      </div>
+      <div class="field">
+        <%= f.text_field :dayprice, label: "Le prix à la nuit", placeholder: "60€" %>
+      </div>
+      <div class="actions col-md-offset-4">
+        <%= f.submit "Envoyer mon annonce" %>
+      </div>
+    <% end %>
