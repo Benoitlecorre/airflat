@@ -5,8 +5,6 @@ ruby '2.1.1'
 gem 'thin'
 gem 'rails_12factor', group: :production
 
-gem 'bootstrap-sass', '~> 3.1.1'
-
 gem 'bootstrap_form'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

@@ -23,5 +23,11 @@
   <span><%= @flat.dayprice %></span> €
 </p>
 
+	<%# @flat.photos.each do |photo| %>
+  <%#= image_tag photo.photo_url %>
+
+<%# end %>
+
 <%= link_to 'Edit', edit_flat_path(@flat), class:"btn btn-info" %> |
 <%= link_to 'Back', flats_path, class:"btn btn-info"  %>
+

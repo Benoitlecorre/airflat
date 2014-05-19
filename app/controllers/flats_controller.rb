@@ -10,6 +10,7 @@ class FlatsController < ApplicationController
   # GET /flats/1
   # GET /flats/1.json
   def show
+    # @photos = @flat.photos
 
   end
 
@@ -24,7 +25,9 @@ class FlatsController < ApplicationController
 
   def create
     @flat = Flat.create(flat_params)
-    redirect_to flat_path(@flat)
+
+    redirect_to flats_path
+
   end
 
   def update
