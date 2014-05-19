@@ -16,8 +16,6 @@
 /log/*.log
 /tmp
 
-<<<<<<< HEAD
-
 # Ignore db yml
 
 /config/database.yml
