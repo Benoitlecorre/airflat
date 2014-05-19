@@ -25,16 +25,20 @@ class FlatsController < ApplicationController
 
   def create
     @flat = Flat.create(flat_params)
+
     redirect_to flats_path
+
   end
 
   def update
-
-
+    @flat.update!(flat_params)
+    flash[:info] = "You have updated successfully the #{@flat.title}"
+    redirect_to flat_path(@flat)
   end
 
   def destroy
     @flat.destroy
+    redirect_to flats_path
   end
 
   private
