@@ -18,7 +18,7 @@ class FlatsControllerTest < ActionController::TestCase
 
   test "should create flat" do
     assert_difference('Flat.count') do
-      post :create, flat: { address: @flat.address, day-price: @flat.day-price, description: @flat.description, title: @flat.title }
+      post :create, flat: { address: @flat.address, dayprice: @flat.dayprice, description: @flat.description, title: @flat.title }
     end
 
     assert_redirected_to flat_path(assigns(:flat))
@@ -35,7 +35,7 @@ class FlatsControllerTest < ActionController::TestCase
   end
 
   test "should update flat" do
-    patch :update, id: @flat, flat: { address: @flat.address, day-price: @flat.day-price, description: @flat.description, title: @flat.title }
+    patch :update, id: @flat, flat: { address: @flat.address, dayprice: @flat.dayprice, description: @flat.description, title: @flat.title }
     assert_redirected_to flat_path(assigns(:flat))
   end
 
