@@ -31,19 +31,16 @@ class FlatsController < ApplicationController
   # PATCH/PUT /flats/1
   # PATCH/PUT /flats/1.json
   def update
-
-
-
+    @flat.update!(flat_params)
+    flash[:info] = "You have updated successfully the #{@flat.title}"
+    redirect_to flat_path(@flat)
   end
 
   # DELETE /flats/1
   # DELETE /flats/1.json
   def destroy
     @flat.destroy
-    respond_to do |format|
-      format.html { redirect_to flats_url, notice: 'Flat was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    redirect_to flats_path
   end
 
   private
