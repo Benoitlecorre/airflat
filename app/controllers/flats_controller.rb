@@ -10,6 +10,7 @@ class FlatsController < ApplicationController
   # GET /flats/1
   # GET /flats/1.json
   def show
+
   end
 
   # GET /flats/new
@@ -21,30 +22,18 @@ class FlatsController < ApplicationController
   def edit
   end
 
-  # POST /flats
-  # POST /flats.json
   def create
     @flat = Flat.new(flat_params)
-
-
+    redirect_to flat_path(@flat.id)
   end
 
-  # PATCH/PUT /flats/1
-  # PATCH/PUT /flats/1.json
   def update
 
 
-
   end
 
-  # DELETE /flats/1
-  # DELETE /flats/1.json
   def destroy
     @flat.destroy
-    respond_to do |format|
-      format.html { redirect_to flats_url, notice: 'Flat was successfully destroyed.' }
-      format.json { head :no_content }
-    end
   end
 
   private
