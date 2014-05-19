@@ -27,15 +27,14 @@ class FlatsController < ApplicationController
     @flat = Flat.new(flat_params)
 
 
-    end
   end
 
   # PATCH/PUT /flats/1
   # PATCH/PUT /flats/1.json
   def update
 
-      end
-    end
+
+
   end
 
   # DELETE /flats/1
