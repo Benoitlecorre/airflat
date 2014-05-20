@@ -16,7 +16,10 @@
  */
 
 /* THEME BOOTSTRAP FREELANCER*/
-
-.top-padder{
+body{
   padding-top: 120px;
+}
+
+.container-fluid{
+  width: 940px;
 }
