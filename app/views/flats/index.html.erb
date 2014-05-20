@@ -1,34 +1,38 @@
 <h1 class="text-center">Tous les appartements à louer</h1>
 
 <% @flats.each do |flat| %>
-  <div class="panel panel-default spacer">
-    <div class="col-md-12">
-        <h3><%= flat.title %></h3>
+  <div class="row-fluid">
+
+    <div class="col-md-8">
+      <h3><%= flat.title %></h3>
+      <p><%= flat.description %></p>
+      <p>Adresse</p>
+      <address><%= flat.address %></address>
+      <p>Prix par jour</p>
+      <p><span><%= flat.dayprice %></span> €</p>
+
+
+      <%= link_to flat do %>
+        <button class="btn btn-info">Aller voir</button>
+      <% end %>
+
+      <%= link_to edit_flat_path(flat) do %>
+        <button class="btn btn-info">Editer l'annonce</button>
+      <% end %>
+
+      <%= link_to flat, method: :delete, data: { confirm: 'Are you sure?' } do %>
+        <button class="btn btn-info">Supprimer l'annonce</button>
+      <% end %>
+
     </div>
 
-    <div class="col-md-12">
-        <p><%= flat.description %></p>
-    </div>
+    <div class="col-md-4">
 
-    <div>
-        <p>Adresse</p>
-        <address><%= flat.address %></address>
-    </div>
+      <img src="http://www.paris-appartements-services.com/img/photo/107/01.jpg" class="thumbnail" width="100%">
 
-    <div>
-        <p>Prix par jour</p>
-        <span><%= flat.dayprice %></span> €
     </div>
-
-    <%= link_to 'Show', flat, class:"btn btn-info" %>
-    <%= link_to 'Edit', edit_flat_path(flat), class:"btn btn-info" %>
-    <%= link_to 'Destroy', flat, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-info" %>
 
   </div>
+
 <% end %>
 
-
-
-
-
-<%= link_to 'Ajouter un nouvel appartement', new_flat_path, class:"btn btn-warning" %>
