@@ -15,11 +15,40 @@
  *= require rails_bootstrap_forms
  */
 
-/* THEME BOOTSTRAP FREELANCER*/
+
+/* THEME BOOTSTRAP FREELANCER MODIFICATIONS */
 body{
-  padding-top: 120px;
+  padding-top: 110px;
 }
 
 .container-fluid{
-  width: 940px;
+  width: 100%;
 }
+
+h1 {
+  color:#18bc9c;
+}
+
+.btn{
+  background-color:#18bc9c;
+  border-color:#18bc9c;
+}
+
+.btn:hover{
+  background-color:#1b8e78;
+  border-color:#18bc9c;
+}
+
+
+/*MISE EN FORME DEUX BLOCS*/
+
+.listings_map{
+  background: url(images/map.png);
+  height:100%;
+}
+
+
+
+
+
+

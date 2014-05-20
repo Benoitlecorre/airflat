@@ -28,6 +28,10 @@
 
 <%# end %>
 
-<%= link_to 'Edit', edit_flat_path(@flat), class:"btn btn-info" %> |
-<%= link_to 'Back', flats_path, class:"btn btn-info"  %>
+<%= link_to edit_flat_path(@flat) do %>
+  <button class="btn btn-info">Edit</button>
+<% end %>
 
+<%= link_to flats_path do %>
+  <button class="btn btn-info">Back</button>
+<% end %>

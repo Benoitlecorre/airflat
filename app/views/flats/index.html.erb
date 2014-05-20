@@ -1,39 +1,25 @@
-<h1 class="text-center">Tous les appartements à louer</h1>
+<div class="row">
 
-<% @flats.each do |flat| %>
+  <!-- Bloc Map -->
+  <div class="listings_map col-md-4">
+    <%= image_tag 'map.png' %>
+  </div>
 
-  <div class="row-fluid">
+  <!-- Bloc Listings Flat -->
+  <div class="listings_flats col-md-8">
 
-    <div class="col-md-8">
-      <h3><%= flat.title %></h3>
-      <p><%= flat.description %></p>
-      <p>Adresse</p>
-      <address><%= flat.address %></address>
-      <p>Prix par jour</p>
-      <p><span><%= flat.dayprice %></span> €</p>
+    <h1>Tous les appartements à louer</h1>
 
+    <% @flats.each_slice(2) do |two_flats| %>
 
-      <%= link_to flat do %>
-        <button class="btn btn-info">Aller voir</button>
-      <% end %>
+      <div class="row">
+        <%= render partial: "flat_box", locals: {flat: two_flats[0]} %>
+        <%= render partial: "flat_box", locals: {flat: two_flats[1]} %>
+      </div>
 
-      <%= link_to edit_flat_path(flat) do %>
-        <button class="btn btn-info">Editer l'annonce</button>
-      <% end %>
-
-      <%= link_to flat, method: :delete, data: { confirm: 'Are you sure?' } do %>
-        <button class="btn btn-info">Supprimer l'annonce</button>
-      <% end %>
-
-    </div>
-
-    <div class="col-md-4">
-
-      <img src="http://www.paris-appartements-services.com/img/photo/107/01.jpg" class="thumbnail" width="100%">
-
-    </div>
+    <% end %>
 
   </div>
 
-<% end %>
 
+</div>

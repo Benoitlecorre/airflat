@@ -1,0 +1,34 @@
+<div class="col-md-6">
+
+  <div class="flat">
+    <div class="row">
+      <div class="col-md-12">
+        <img src="http://www.paris-appartements-services.com/img/photo/107/01.jpg" class="thumbnail" width="100%">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3">
+        <img src="http://www.paris-appartements-services.com/img/photo/107/01.jpg" class="thumbnail" width="100%">
+      </div>
+      <div class="col-md-9">
+        <h3><%= flat.title %></h3>
+        <p><%= flat.description %></p>
+        <p>Adresse</p>
+        <address><%= flat.address %></address>
+        <p>Prix par jour</p>
+        <p><span><%= flat.dayprice %></span> €</p>
+        <%= link_to flat do %>
+        <button class="btn btn-info">Aller voir</button>
+        <% end %>
+        <%= link_to edit_flat_path(flat) do %>
+        <button class="btn btn-info">Editer l'annonce</button>
+        <% end %>
+        <%= link_to flat, method: :delete, data: { confirm: 'Are you sure?' } do %>
+        <button class="btn btn-info">Supprimer l'annonce</button>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+</div>
