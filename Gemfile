@@ -1,6 +1,10 @@
 source 'https://rubygems.org'
 
 
+gem 'figaro'
+gem 'paperclip', github: 'thoughtbot/paperclip'
+gem 'aws-sdk'
+
 ruby '2.1.1'
 gem 'thin'
 gem 'rails_12factor', group: :production
