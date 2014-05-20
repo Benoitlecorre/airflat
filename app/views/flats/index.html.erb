@@ -1,12 +1,14 @@
-<div class="row">
+
 
   <!-- Bloc Map -->
-  <div class="listings_map col-md-4">
+
+  <div class="listings_map">
     <%= image_tag 'map.png' %>
   </div>
 
+<div class="row">
   <!-- Bloc Listings Flat -->
-  <div class="listings_flats col-md-8">
+  <div class="listings_flats col-md-offset-4 col-md-8">
 
     <h1>Tous les appartements à louer</h1>
 
@@ -14,7 +16,7 @@
 
       <div class="row">
         <%= render partial: "flat_box", locals: {flat: two_flats[0]} %>
-        <%= render partial: "flat_box", locals: {flat: two_flats[1]} %>
+        <%= render partial: "flat_box", locals: {flat: two_flats[1]} if two_flats[1] %>
       </div>
 
     <% end %>

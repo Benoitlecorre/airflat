@@ -45,9 +45,8 @@ h1 {
 .listings_map{
   background: url(images/map.png);
   height:100%;
+  position:fixed;
 }
-
-
 
 
 
