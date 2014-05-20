@@ -52,5 +52,4 @@ class FlatsController < ApplicationController
       params.require(:flat).permit(:title, :description, :address, :dayprice, :picture)
     end
 
- end
 end
