@@ -12,8 +12,6 @@
  *
  *= require_tree .
  *= require_self
- *= require owl.carousel
- *= require owl.theme
  *= require rails_bootstrap_forms
  */
 
@@ -25,7 +23,7 @@ body{
 h3 {
   color: #30A5DF;
 }
-
+/*
 #owl-demo .item{
   margin: 3px;
 }
@@ -34,4 +32,4 @@ h3 {
   width: 100%;
   height: auto;
 }
-
+*/

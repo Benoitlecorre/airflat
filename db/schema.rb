@@ -11,10 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140520100923) do
-
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+ActiveRecord::Schema.define(version: 20140520124807) do
 
   create_table "flats", force: true do |t|
     t.string   "title"
@@ -23,10 +20,6 @@ ActiveRecord::Schema.define(version: 20140520100923) do
     t.integer  "dayprice"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "picture_file_name"
-    t.string   "picture_content_type"
-    t.integer  "picture_file_size"
-    t.datetime "picture_updated_at"
   end
 
   create_table "photos", force: true do |t|
@@ -35,6 +28,10 @@ ActiveRecord::Schema.define(version: 20140520100923) do
     t.integer  "flat_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
   end
 
   add_index "photos", ["flat_id"], name: "index_photos_on_flat_id", using: :btree

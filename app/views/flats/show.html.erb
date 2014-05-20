@@ -4,21 +4,6 @@
 
 <p id="notice"><%= notice %></p>
 
-<div id="owl-demo">
-
-  <div class="item"><img src="http://www.urbansejour.com/wp-content/files/2009/05/lyon-part-dieu-paul-bert-salon3-GF.jpg" alt="Owl Image"></div>
-  <div class="item"><img src="http://www.urbansejour.com/wp-content/files/2009/05/lyon-part-dieu-paul-bert-salon3-GF.jpg" alt="Owl Image"></div>
-  <div class="item"><img src="http://www.urbansejour.com/wp-content/files/2009/05/lyon-part-dieu-paul-bert-salon3-GF.jpg" alt="Owl Image"></div>
-  <div class="item"><img src="http://www.urbansejour.com/wp-content/files/2009/05/lyon-part-dieu-paul-bert-salon3-GF.jpg" alt="Owl Image"></div>
-  <div class="item"><img src="http://www.urbansejour.com/wp-content/files/2009/05/lyon-part-dieu-paul-bert-salon3-GF.jpg" alt="Owl Image"></div>
-  <div class="item"><img src="http://www.urbansejour.com/wp-content/files/2009/05/lyon-part-dieu-paul-bert-salon3-GF.jpg" alt="Owl Image"></div>
-  <div class="item"><img src="http://www.urbansejour.com/wp-content/files/2009/05/lyon-part-dieu-paul-bert-salon3-GF.jpg" alt="Owl Image"></div>
-  <div class="item"><img src="http://www.urbansejour.com/wp-content/files/2009/05/lyon-part-dieu-paul-bert-salon3-GF.jpg" alt="Owl Image"></div>
-
-</div>
-
-
-
   <div class="col-md-6 col-md-offset-3">
     <h3><%= @flat.title %><h3>
   </div>
@@ -45,6 +30,11 @@
 
 
 
+<h1><%= @flat.title %></h1>
+
+<% @flat.photos.each do |photo| %>
+<%= image_tag photo.picture.url(:medium) %>
+<% end %>
 
 <%= link_to 'Edit', edit_flat_path(@flat), class:"btn btn-info" %> |
 <%= link_to 'Back', flats_path, class:"btn btn-info"  %>
