@@ -16,13 +16,14 @@
       <div class="field">
         <%= f.text_field :title, label: "Titrez votre annonce", placeholder: "Pied à terre amoureux" %>
       </div>
-      <div class="field">
-        <%= f.text_area :description, label: "Décrivez votre logement, donnez envie à vos futurs hôtes", placeholder: "Charmant studio dans le Marais, à deux pas des stations de métro"   %>
-      </div>
 
       <div class="field">
-        <%= f.file_field :picture, label: "Ajouter votre photo" %>
+        <%= f.text_area :description, label: "Décrivez votre logement, donnez envie à vos futurs hôtes", placeholder: "Charmant studio dans le Marais, à deux pas des stations de métro" %>
       </div>
+
+
+      <%= f.file_field :picture %>
+
 
 
       <div class="field">

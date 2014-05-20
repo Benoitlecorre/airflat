@@ -5,13 +5,15 @@
   <div class="row-fluid">
 
     <div class="col-md-8">
-      <h3><%= flat.title %></h3>
+
+      <%= link_to flat_path(flat) do %>
+        <h3><%= flat.title %></h3>
+      <% end %>
       <p><%= flat.description %></p>
       <p>Adresse</p>
       <address><%= flat.address %></address>
       <p>Prix par jour</p>
       <p><span><%= flat.dayprice %></span> €</p>
-
 
       <%= link_to flat do %>
         <button class="btn btn-info">Aller voir</button>
@@ -29,7 +31,10 @@
 
     <div class="col-md-4">
 
-      <img src="http://www.paris-appartements-services.com/img/photo/107/01.jpg" class="thumbnail" width="100%">
+      <% flat.photos.each do |photo| %>
+        <%= image_tag photo.picture.url(:medium) %>
+      <% end %>
+
 
     </div>
 
