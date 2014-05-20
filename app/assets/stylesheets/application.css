@@ -12,6 +12,8 @@
  *
  *= require_tree .
  *= require_self
+ *= require owl.carousel
+ *= require owl.theme
  *= require rails_bootstrap_forms
  */
 
@@ -20,6 +22,16 @@ body{
   padding-top: 120px;
 }
 
-.container-fluid{
-  width: 940px;
+h3 {
+  color: #30A5DF;
 }
+
+#owl-demo .item{
+  margin: 3px;
+}
+#owl-demo .item img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
