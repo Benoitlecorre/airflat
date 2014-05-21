@@ -63,18 +63,14 @@ footer{
   font-size:1.5em;
 }
 
-.price{
-  border:solid 2px #18BC9C;
-}
-
 .price span{
-  font-size:3em;
-  color:#18BC9C;
+  font-size:4em;
+  color:#FFFFFF;
 }
 
 .below-box {
-  background-color: #FAFAFA;
-  padding:5px;
+  background-color: #ecf0f1;
+  padding:5px 12px;
 }
 
 /* MISE EN PAGE FORMULAIRE */
