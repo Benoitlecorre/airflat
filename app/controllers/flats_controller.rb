@@ -35,7 +35,7 @@ class FlatsController < ApplicationController
 
   def update
     @flat.update!(flat_params)
-    @flat.photos.create(photo_params)
+    @flat.photos.create(photo_params) if !photo_params().blank?
     flash[:info] = "You have updated successfully the #{@flat.title}"
     redirect_to flat_path(@flat)
   end
