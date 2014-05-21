@@ -51,7 +51,7 @@ class FlatsController < ApplicationController
     end
 
     def photo_params
-      params.require(:flat).permit(:picture)
+      params.require(:flat).permit(:file)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

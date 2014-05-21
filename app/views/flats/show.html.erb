@@ -33,9 +33,18 @@
 <h1><%= @flat.title %></h1>
 
 <% @flat.photos.each do |photo| %>
-<%= image_tag photo.picture.url(:medium) %>
+<%= image_tag photo.file.url(:medium) %>
 <% end %>
 
-<%= link_to 'Edit', edit_flat_path(@flat), class:"btn btn-info" %> |
-<%= link_to 'Back', flats_path, class:"btn btn-info"  %>
 
+<%= link_to edit_flat_path(@flat) do %>
+  <button class="btn btn-info">Editer l'annonce</button>
+<% end %>
+
+<%= link_to flat_path(@flat), method: :delete, data: { confirm: 'Are you sure?' } do %>
+  <button class="btn btn-info">Supprimer l'annonce</button>
+<% end %>
+
+<%= link_to flats_path do %>
+<button class="btn btn-default">Retour à la liste des annonces</button>  %>
+<% end %>
