@@ -2,46 +2,102 @@
   <%= flash[:info] %>
 </div>
 
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
 
-  <div class="col-md-6 col-md-offset-3">
-    <h3><%= @flat.title %><h3>
+    <div class="col-md-offset-3 col-md-4">
+
+       <% if @flat.photos.size == 0 %>
+          <%= "pas de photos" %>
+          <% else %>
+
+          <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+         <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+          </ol>
+
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <%= image_tag @flat.photos.first.file.url(:medium) %>
+          </div>
+            <% @flat.photos[0..@flat.photos.length-2].each do |photo| %>
+            <div class="item">
+              <%= image_tag photo.file.url(:medium) %>
+            </div>
+          <% end %>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left">
+          </span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+      </div>
+<% end %>
+    </div><!-- end on col-->
+
+  </div><!-- end on row-->
+
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h3><%= @flat.title %><h3>
+
+    </div>
   </div>
-
-  <div class ="col-md-6 col-md-offset-3">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-3">
       <strong>Description:</strong>
       <p><%= @flat.description %></p>
+      <p>
+        <strong>Day-price:</strong>
+        <span><%= @flat.dayprice %></span> €
+      </p>
+      <p>
+        <strong>Address:</strong>
+        <address><%= @flat.address %></address>
+      </p>
+    </div>
   </div>
 
-  <div class ="col-md-6 col-md-offset-3">
-        <p>
-          <strong>Address:</strong>
-          <address><%= @flat.address %></address>
-        </p>
+  <div class="row">
+
   </div>
 
-  <div class ="col-md-6 col-md-offset-3">
-        <p>
-          <strong>Day-price:</strong>
-          <span><%= @flat.dayprice %></span> €
-        </p>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= link_to edit_flat_path(@flat) do %>
+      <button class="btn btn-info">Editer l'annonce</button>
+      <% end %>
+
+      <%= link_to flat_path(@flat), method: :delete, data: { confirm: 'Are you sure?' } do %>
+      <button class="btn btn-info">Supprimer l'annonce</button>
+      <% end %>
+    </div>
   </div>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3 spacer">
+      <%= link_to flats_path do %>
+      <button class="btn btn-default">Retour à la liste des annonces</button>
+      <% end %>
+    </div>
+  </div>
+
+
 </div>
 
-<div class="col-md-6 col-md-offset-3">
-  <% @flat.photos.each do |photo| %>
-  <%= image_tag photo.file.url(:medium) %>
-  <% end %>
 
+<!--<p id="notice"><%= notice %></p>-->
 
-  <%= link_to edit_flat_path(@flat) do %>
-    <button class="btn btn-info">Editer l'annonce</button>
-  <% end %>
-
-  <%= link_to flat_path(@flat), method: :delete, data: { confirm: 'Are you sure?' } do %>
-    <button class="btn btn-info">Supprimer l'annonce</button>
-  <% end %>
-
-  <%= link_to flats_path do %>
-  <button class="btn btn-default">Retour à la liste des annonces</button>
-  <% end %></div>
+<script>
+$(document).ready(function(){
+  $('.carousel').carousel();
+});
+</script>

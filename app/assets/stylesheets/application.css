@@ -16,8 +16,8 @@
  */
 
 /* THEME BOOTSTRAP FREELANCER*/
-body{
-  padding-top: 120px;
+body,html{
+  padding-top: 50px;
 }
 
 h3 {
@@ -38,6 +38,12 @@ h3 {
  height: 900px;
 }
 
-#index-title{
-  padding-bottom: 25px;
+.spacer{
+  padding-top:5px;
+  padding-bottom:5px;
+}
+
+footer{
+  height:40px;
+  margin-top:100px;
 }

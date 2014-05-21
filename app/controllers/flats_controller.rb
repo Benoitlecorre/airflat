@@ -12,7 +12,7 @@ class FlatsController < ApplicationController
   # GET /flats/1.json
   def show
     # @photos = @flat.photos
-
+    @flat = Flat.find(params[:id])
   end
 
   # GET /flats/new
