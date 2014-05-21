@@ -17,7 +17,8 @@
         <div class="col-md-6">
 
           <div class="col-md-4">
-            <%= image_tag flat.photos.first %>
+
+            <%= image_tag flat.photos.first.file.url(:medium) if flat.photos.size > 0 %>
           </div>
 
           <%= link_to flat_path(flat) do %>
