@@ -19,18 +19,25 @@
 
         <div class="col-md-6">
 
-          <div class="col-md-4">
+          <div class="row">
+          <div class="col-md-12">
             <%= image_tag flat.photos.first.file.url(:medium) if flat.photos.size > 0 %>
           </div>
-          <%= link_to flat_path(flat) do %>
-          <h3><%= flat.title %></h3>
-          <% end %>
+          </div>
 
-          <p><%= flat.description %></p>
-          <p>Adresse</p>
-          <address><%= flat.address %></address>
-          <p>Prix par jour</p>
-          <p><span><%= flat.dayprice %></span> €</p>
+          <div class="row">
+          <div class="col-md-12">
+            <%= link_to flat_path(flat) do %>
+            <h3><%= flat.title %></h3>
+           <% end %>
+
+            <p><%= flat.description %></p>
+            <p>Adresse</p>
+            <address><%= flat.address %></address>
+            <p>Prix par jour</p>
+            <p><span><%= flat.dayprice %></span> €</p>
+          </div>
+        </div>
         </div>
         <% end %>
 
