@@ -1,0 +1,6 @@
+<% @flat.photos.each do |photo| %>
+  <fieldset>
+    <%= image_tag photo.file.url(:medium) %>
+    <%= link_to "Delete", photo_path(photo), class: 'delete-photo', method: :delete, remote: true %>
+  </fieldset>
+<% end %>

@@ -1,6 +1,7 @@
 
 
-    <%= bootstrap_form_for(@flat, :html => { :multipart => true }, layout: :horizontal, label_col: "col-sm-4", control_col: "col-sm-4", ) do |f| %>
+    <%= bootstrap_form_for(@flat, :html => { :multipart => true }, :remote => true, layout: :horizontal, label_col: "col-sm-4", control_col: "col-sm-4", ) do |f| %>
+
       <% if @flat.errors.any? %>
         <div id="error_explanation">
           <h2><%= pluralize(@flat.errors.count, "error") %> prohibited this flat from being saved:</h2>
@@ -21,10 +22,11 @@
         <%= f.text_area :description, label: "Décrivez votre logement, donnez envie à vos futurs hôtes", placeholder: "Charmant studio dans le Marais, à deux pas des stations de métro" %>
       </div>
 
+      <div id="pictures-container">
+          <%= render partial: 'pictures' %>
+        </div>
 
-      <%= f.file_field :file %>
-
-
+      <%= f.file_field :file, class: "upload" %>
 
       <div class="field">
         <%= f.text_field :address, label: "Votre adresse", placeholder: "12 rue du Petit Musc, 75004, Paris" %>
