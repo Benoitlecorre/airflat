@@ -28,23 +28,20 @@
   </div>
 </div>
 
+<div class="col-md-6 col-md-offset-3">
+  <% @flat.photos.each do |photo| %>
+  <%= image_tag photo.file.url(:medium) %>
+  <% end %>
 
 
-<h1><%= @flat.title %></h1>
+  <%= link_to edit_flat_path(@flat) do %>
+    <button class="btn btn-info">Editer l'annonce</button>
+  <% end %>
 
-<% @flat.photos.each do |photo| %>
-<%= image_tag photo.file.url(:medium) %>
-<% end %>
+  <%= link_to flat_path(@flat), method: :delete, data: { confirm: 'Are you sure?' } do %>
+    <button class="btn btn-info">Supprimer l'annonce</button>
+  <% end %>
 
-
-<%= link_to edit_flat_path(@flat) do %>
-  <button class="btn btn-info">Editer l'annonce</button>
-<% end %>
-
-<%= link_to flat_path(@flat), method: :delete, data: { confirm: 'Are you sure?' } do %>
-  <button class="btn btn-info">Supprimer l'annonce</button>
-<% end %>
-
-<%= link_to flats_path do %>
-<button class="btn btn-default">Retour à la liste des annonces</button>  %>
-<% end %>
+  <%= link_to flats_path do %>
+  <button class="btn btn-default">Retour à la liste des annonces</button>
+  <% end %></div>
