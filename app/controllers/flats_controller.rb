@@ -1,5 +1,6 @@
 class FlatsController < ApplicationController
   before_action :set_flat, only: [:show, :edit, :update, :destroy]
+  respond_to :js, :html
 
   # GET /flats
   # GET /flats.json
@@ -37,7 +38,11 @@ class FlatsController < ApplicationController
     @flat.update!(flat_params)
     @flat.photos.create(photo_params) if !photo_params().blank?
     flash[:info] = "You have updated successfully the #{@flat.title}"
-    redirect_to flat_path(@flat)
+
+    respond_with do |format|
+      format.js
+      format.html { redirect_to flat_path(@flat) }
+    end
   end
 
   def destroy

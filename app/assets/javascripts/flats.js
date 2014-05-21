@@ -1,15 +1,9 @@
-// $(document).ready(function() {
+$(function() {
+  $('body').on('click', '.delete-photo', function() {
+    $(this).parent("fieldset").fadeOut(500);
+  })
 
-//   $("#owl-demo").owlCarousel({
-
-//       autoPlay: 3000, //Set AutoPlay to 3 seconds
-
-//       items : 4,
-//       itemsDesktop : [1199,3],
-//       itemsDesktopSmall : [979,3]
-
-//   });
-
-// });
-
-// $(".owl-carousel").owlCarousel();
+  $('body').on('change', '.upload', function() {
+    $(this).parents('form').submit();
+  });
+});
