@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-
+gem 'better_errors'
+gem 'binding_of_caller'
 gem 'figaro'
 gem 'paperclip', github: 'thoughtbot/paperclip'
 gem 'aws-sdk'

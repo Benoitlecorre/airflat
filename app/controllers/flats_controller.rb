@@ -35,6 +35,7 @@ class FlatsController < ApplicationController
 
   def update
     @flat.update!(flat_params)
+    @flat.photos.create(photo_params)
     flash[:info] = "You have updated successfully the #{@flat.title}"
     redirect_to flat_path(@flat)
   end
@@ -51,7 +52,7 @@ class FlatsController < ApplicationController
     end
 
     def photo_params
-      params.require(:flat).permit(:picture)
+      params.require(:flat).permit(:file)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
