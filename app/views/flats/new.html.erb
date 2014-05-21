@@ -1,8 +1,17 @@
-<h1>New flat</h1>
+<div class="container green general">
+  <div class="row">
+    <div class="col-md-offset-4 col-md-12">
+      <h1>New flat</h1>
+    </div>
+  </div>
 
-<%= render 'form' %>
+  <%= render 'form' %>
 
-
-<%= link_to flats_path do %>
-<button class="btn btn-default">Retourner à la liste</button>
-<% end %>
+  <div class="row">
+    <div class="col-md-offset-4 col-md-12">
+      <%= link_to flats_path do %>
+      <button class="btn btn-default">Retourner à la liste</button>
+      <% end %>
+    </div>
+  </div>
+</div>

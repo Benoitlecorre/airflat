@@ -74,18 +74,18 @@
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
       <%= link_to edit_flat_path(@flat) do %>
-      <button class="btn btn-info">Editer l'annonce</button>
+      <button class="btn btn-info invert">Editer l'annonce</button>
       <% end %>
 
       <%= link_to flat_path(@flat), method: :delete, data: { confirm: 'Are you sure?' } do %>
-      <button class="btn btn-info">Supprimer l'annonce</button>
+      <button class="btn btn-info invert">Supprimer l'annonce</button>
       <% end %>
     </div>
   </div>
   <div class="row">
     <div class="col-md-6 col-md-offset-3 spacer">
       <%= link_to flats_path do %>
-      <button class="btn btn-default">Retour à la liste des annonces</button>
+      <button class="btn btn-default invert">Retour à la liste des annonces</button>
       <% end %>
     </div>
   </div>

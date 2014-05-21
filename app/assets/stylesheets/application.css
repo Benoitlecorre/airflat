@@ -15,35 +15,97 @@
  *= require rails_bootstrap_forms
  */
 
-/* THEME BOOTSTRAP FREELANCER*/
+/* MISE EN PAGE GENERALE*/
+
 body,html{
   padding-top: 50px;
 }
 
-h3 {
-  color: #30A5DF;
-}
-/*
-#owl-demo .item{
-  margin: 3px;
-}
-#owl-demo .item img{
-  display: block;
-  width: 100%;
-  height: auto;
-}
-*/
 
-#map-box{
- height: 900px;
+h1{
+  margin-top:30px;
+  margin-bottom:30px;
+}
+
+h3 {
+  color: #18BC9C;
 }
 
 .spacer{
-  padding-top:5px;
-  padding-bottom:5px;
+  padding-top:10px;
+  padding-bottom:10px;
 }
 
 footer{
   height:40px;
-  margin-top:100px;
+}
+
+.general{
+  width:100%;
+  padding-top:50px;
+  padding-bottom: 50px;
+}
+
+/* MISE EN PAGE INDEX */
+
+#map-box{
+ height: 100%;
+}
+
+.box{
+  border:solid 2px #FAFAFA;
+  border-radius:5px;
+  margin-bottom:10px;
+  margin-top:10px;
+}
+
+.box h3{
+  font-size:1.5em;
+}
+
+.price{
+  border:solid 2px #18BC9C;
+}
+
+.price span{
+  font-size:3em;
+  color:#18BC9C;
+}
+
+.below-box {
+  background-color: #FAFAFA;
+  padding:5px;
+}
+
+/* MISE EN PAGE FORMULAIRE */
+
+.green {
+  background-color:#18BC9C;
+  color:white;
+}
+
+.btn {
+  border:solid 3px #FFFFFF;
+  border-radius:5px;
+  background-color:#18BC9C;
+}
+
+.btn:hover {
+  background-color:#FFFFFF;
+  color:#18BC9C;
+  border:solid 3px #FFFFFF;
+}
+
+.invert{
+  border:solid 3px #18BC9C;
+  border-radius:5px;
+  background-color:#FFFFFF;
+  color:#18BC9C;
+}
+
+.invert:hover {
+  background-color:#18BC9C;
+  color:#18BC9C;
+  border:solid 3px #18BC9C;
+  color:#FFFFFF;
 }
