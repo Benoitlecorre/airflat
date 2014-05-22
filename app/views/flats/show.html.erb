@@ -74,13 +74,20 @@
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
 
+
       <% if user_signed_in? %>
+      <% if policy(@flat).update? %>
       <%= link_to edit_flat_path(@flat) do %>
       <button class="btn btn-info invert">Editer l'annonce</button>
       <% end %>
+      <% end %>
 
+
+
+      <% if policy(@flat).destroy? %>
       <%= link_to flat_path(@flat), method: :delete, data: { confirm: 'Are you sure?' } do %>
       <button class="btn btn-info invert">Supprimer l'annonce</button>
+      <% end %>
       <% end %>
       <% end %>
 

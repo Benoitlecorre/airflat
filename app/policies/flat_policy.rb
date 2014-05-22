@@ -14,10 +14,18 @@ class FlatPolicy < ApplicationPolicy
   end
 
   def update?
-    true
+    if record.user_id == user.id
+     true
+    else
+      false
+    end
   end
 
   def destroy?
-    user.admin?
+    if record.user_id == user.id
+     true
+    else
+      false
+    end
   end
 end
