@@ -63,13 +63,18 @@ footer{
   font-size:1.5em;
 }
 
-.price span{
+.price{
+  padding-top:30px;
   font-size:4em;
   color:#FFFFFF;
 }
 
+.price p{
+  padding-top: 15px;
+}
+
 .below-box {
-  background-color: #ecf0f1;
+  background-color: #FAFAFA;
   padding:5px 12px;
 }
 
