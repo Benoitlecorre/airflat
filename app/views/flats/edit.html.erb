@@ -1,6 +1,21 @@
-<h1>Editing flat</h1>
+<div class="container green general">
+  <div class="row">
+    <div class="col-md-offset-4 col-md-12">
+      <h1>Edit</h1>
+    </div>
+  </div>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @flat, class:"btn btn-info" %> |
-<%= link_to 'Back', flats_path, class:"btn btn-info" %>
+  <div class="row">
+    <div class="col-md-offset-4 col-md-12">
+      <%= link_to flats_path do %>
+      <button class="btn btn-default">Retourner à la liste</button>
+      <% end %>
+      <%= link_to @flat do %>
+      <button class="btn btn-default">Show</button>
+      <% end %>
+    </div>
+  </div>
+</div>
+

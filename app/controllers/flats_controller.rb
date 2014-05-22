@@ -31,7 +31,6 @@ class FlatsController < ApplicationController
     flat.photos.create(photo_params) if !photo_params().blank?
 
     redirect_to flat_path(flat)
-
   end
 
   def update
