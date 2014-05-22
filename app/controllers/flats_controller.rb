@@ -18,8 +18,10 @@ class FlatsController < ApplicationController
 
   # GET /flats/new
   def new
+
     @flat = Flat.new
     @photo = Photo.new
+    authorize @flat
   end
 
   # GET /flats/1/edit
@@ -28,10 +30,12 @@ class FlatsController < ApplicationController
   end
 
   def create
+
     flat = Flat.create(flat_params)
     flat.photos.create(photo_params) if !photo_params().blank?
-
+    authorize flat
     redirect_to flat_path(flat)
+
   end
 
   def update
@@ -54,6 +58,7 @@ class FlatsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_flat
       @flat = Flat.find(params[:id])
+      authorize @flat
     end
 
     def photo_params

@@ -7,6 +7,7 @@ gem 'figaro'
 gem 'paperclip', github: 'thoughtbot/paperclip'
 gem 'aws-sdk'
 gem 'devise'
+gem 'pundit'
 
 
 ruby '2.1.1'
