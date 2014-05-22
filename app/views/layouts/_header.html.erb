@@ -13,33 +13,48 @@
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <% if user_signed_in? %>
-                      <li class="page-scroll">
-                          <%= link_to "Créer une annonce", new_flat_path %>
-                      </li>
-                    <% end %>
-                    <li class="page-scroll">
-                        <%= link_to "Voir la liste des annonces", flats_path %>
-                    </li>
-                    <% if user_signed_in? %>
-                      <li class="navbar-text">
-                        Logged in as <strong><%= current_user.email %></strong>.
-                        <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %>
-                        <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-                    <% else %>
-                      </li>
-                      <li class="page-scroll">
-                        <%= link_to "Sign up", new_user_registration_path  %>
-                      </li>
-                      <li class="page-scroll">
-                        <%= link_to "Login", new_user_session_path %>
-                      </li>
-                    <% end %>
-                </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li class="hidden">
+                  <a href="#page-top"></a>
+                </li>
+                <% if user_signed_in? %>
+                <li class="page-scroll">
+                  <%= link_to "Créer une annonce", new_flat_path %>
+                </li>
+                <% end %>
+                <li class="page-scroll">
+                  <%= link_to "Voir la liste des annonces", flats_path %>
+                </li>
+                <% if user_signed_in? %>
+                <li class="navbar-text">
+                <strong><%= current_user.email %></strong>.
+                </li>
+
+                <li>
+                  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %>
+                </li>
+                <li>
+                  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+                </li>
+                <% else %>
+
+
+
+
+
+
+
+
+
+
+                <li class="page-scroll">
+                  <%= link_to "Sign up", new_user_registration_path  %>
+                </li>
+                <li class="page-scroll">
+                  <%= link_to "Login", new_user_session_path %>
+                </li>
+                <% end %>
+              </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
