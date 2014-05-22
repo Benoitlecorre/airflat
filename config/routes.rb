@@ -1,7 +1,23 @@
 Rails.application.routes.draw do
+  get 'bookings/create'
+
+  get 'bookings/edit'
+
+  get 'bookings/new'
+
+  get 'bookings/index'
+
+  get 'bookings/destroy'
+
+  get 'bookings/show'
+
+  get 'bookings/update'
+
   root 'flats#index'
   devise_for :users
-  resources :flats
+  resources :flats do
+    resources :bookings
+  end
   resources :photos
 
 
