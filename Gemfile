@@ -6,7 +6,7 @@ gem 'binding_of_caller'
 gem 'figaro', '1.0.0.rc1'
 gem 'paperclip', github: 'thoughtbot/paperclip'
 gem 'aws-sdk'
-
+gem 'devise'
 
 
 ruby '2.1.1'
