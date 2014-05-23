@@ -9,6 +9,9 @@ gem 'aws-sdk'
 gem 'devise'
 gem 'pundit'
 
+gem "geocoder"
+
+
 
 ruby '2.1.1'
 gem 'thin'
