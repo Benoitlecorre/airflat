@@ -8,6 +8,7 @@ gem 'paperclip', github: 'thoughtbot/paperclip'
 gem 'aws-sdk'
 gem 'devise'
 gem 'pundit'
+gem 'activeadmin', github: 'gregbell/active_admin'
 
 
 ruby '2.1.1'
