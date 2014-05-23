@@ -49,6 +49,18 @@ ActiveRecord::Schema.define(version: 20140523101345) do
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
 
+  create_table "bookings", force: true do |t|
+    t.date     "start"
+    t.date     "end"
+    t.integer  "user_id"
+    t.integer  "flat_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "bookings", ["flat_id"], name: "index_bookings_on_flat_id", using: :btree
+  add_index "bookings", ["user_id"], name: "index_bookings_on_user_id", using: :btree
+
   create_table "flats", force: true do |t|
     t.string   "title"
     t.text     "description"
