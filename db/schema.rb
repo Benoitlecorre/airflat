@@ -56,11 +56,9 @@ ActiveRecord::Schema.define(version: 20140523101345) do
     t.integer  "dayprice"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "picture_file_name"
-    t.string   "picture_content_type"
-    t.integer  "picture_file_size"
-    t.datetime "picture_updated_at"
     t.integer  "user_id"
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
   add_index "flats", ["user_id"], name: "index_flats_on_user_id", using: :btree
