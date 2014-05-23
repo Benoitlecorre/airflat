@@ -10,6 +10,9 @@ gem 'devise'
 gem 'pundit'
 gem 'activeadmin', github: 'gregbell/active_admin'
 
+gem "geocoder"
+gem "gmaps4rails"
+
 
 ruby '2.1.1'
 gem 'thin'

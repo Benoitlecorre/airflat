@@ -99,6 +99,8 @@ GEM
       thor (~> 0.14)
     formtastic (2.3.0.rc3)
       actionpack (>= 3.0)
+    geocoder (1.2.1)
+    gmaps4rails (2.1.2)
     has_scope (0.6.0.rc)
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
@@ -223,6 +225,8 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   devise
   figaro (= 1.0.0.rc1)
+  geocoder
+  gmaps4rails
   jbuilder (~> 2.0)
   jquery-rails
   owlcarousel-rails

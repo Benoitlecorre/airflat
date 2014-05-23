@@ -7,6 +7,10 @@ class FlatsController < ApplicationController
   # GET /flats.json
   def index
     @flats = Flat.all
+    @hash = Gmaps4rails.build_markers(@flats) do |flat, marker|
+      marker.lat flat.latitude
+      marker.lng flat.longitude
+    end
   end
 
   # GET /flats/1
