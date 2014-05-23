@@ -110,3 +110,8 @@ footer{
   border:solid 3px #18BC9C;
   color:#FFFFFF;
 }
+
+#map-box-show{
+  margin-bottom: 25px;
+  margin-top: 25px;
+}

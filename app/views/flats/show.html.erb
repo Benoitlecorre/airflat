@@ -57,13 +57,28 @@
       <strong>Description:</strong>
       <p><%= @flat.description %></p>
       <p>
-        <strong>Day-price:</strong>
+        <strong>Prix de la nuité:</strong>
         <span><%= @flat.dayprice %></span> €
       </p>
       <p>
-        <strong>Address:</strong>
+        <strong>Adresse:</strong>
         <address><%= @flat.address %></address>
       </p>
+      <p>
+        <strong>Latitude:</strong>
+        <span><%= @flat.latitude %></span>
+      </p>
+      <p>
+        <strong>Longitude:</strong>
+        <span><%= @flat.longitude %></span>
+      </p>
+
+
+      <div id="map-box-show">
+        <%= image_tag "http://maps.google.com/maps/api/staticmap?size=500x300&sensor=false&zoom=16&markers=#{@flat.latitude}%2C#{@flat.longitude}" %>
+      </div>
+
+
     </div>
   </div>
 
