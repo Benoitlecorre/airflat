@@ -8,6 +8,7 @@ gem 'paperclip', github: 'thoughtbot/paperclip'
 gem 'aws-sdk'
 gem 'devise'
 gem 'pundit'
+gem 'activeadmin', github: 'gregbell/active_admin'
 
 gem "geocoder"
 gem "gmaps4rails"
